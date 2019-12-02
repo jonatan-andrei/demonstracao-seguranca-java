@@ -8,9 +8,9 @@ import lombok.RequiredArgsConstructor;
 @RequiredArgsConstructor(access = AccessLevel.PRIVATE)
 public enum Perfil {
 
-    ADMINISTRADOR("PERFIL_ADMINISTRADOR"),
-    VENDEDOR("PERFIL_VENDEDOR"),
-    CLIENTE("PERFIL_CLIENTE");
+    ADMINISTRADOR("ROLE_ADMINISTRADOR"),
+    VENDEDOR("ROLE_VENDEDOR"),
+    CLIENTE("ROLE_CLIENTE");
 
     private final String role;
 
