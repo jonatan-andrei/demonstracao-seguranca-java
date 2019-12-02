@@ -1,0 +1,17 @@
+server:
+  port: 8096
+
+spring:
+  jpa:
+    database-platform: org.hibernate.dialect.Oracle10gDialect
+    hibernate:
+      ddl-auto: validate
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+  datasource:
+    url: jdbc:oracle:thin:@localhost:1521:xe
+    username: me_leva_ai
+    password: me_leva_ai
+    driver-class-name: oracle.jdbc.OracleDriver
