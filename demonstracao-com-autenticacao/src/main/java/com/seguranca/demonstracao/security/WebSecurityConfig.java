@@ -66,6 +66,9 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .antMatchers(HttpMethod.GET, "/produto")
                 .permitAll()
 
+                .antMatchers(HttpMethod.GET, "/produto/**")
+                .authenticated()
+
                 .antMatchers(HttpMethod.POST, "/produto")
                 .hasRole("ADMIN")
 
@@ -73,7 +76,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .hasAnyRole("ADMIN", "VENDEDOR")
 
                 .anyRequest()
-                .authenticated();
+                .denyAll();
 
         http.addFilterBefore(jwtAuthenticationFilter, UsernamePasswordAuthenticationFilter.class);
     }
