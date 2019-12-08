@@ -12,6 +12,6 @@ spring:
         format_sql: true
   datasource:
     url: jdbc:oracle:thin:@localhost:1521:xe
-    username: me_leva_ai
-    password: me_leva_ai
+    username: usuario
+    password: senha
     driver-class-name: oracle.jdbc.OracleDriver
