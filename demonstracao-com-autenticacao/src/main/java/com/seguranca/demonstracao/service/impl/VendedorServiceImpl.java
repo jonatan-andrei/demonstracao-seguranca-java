@@ -9,8 +9,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
-import static java.util.Objects.nonNull;
-
 @Service
 public class VendedorServiceImpl implements VendedorService {
 
@@ -24,7 +22,7 @@ public class VendedorServiceImpl implements VendedorService {
     private PasswordEncoder passwordEncoder;
 
     public void cadastrar(String email, String senha) {
-        if (nonNull(usuarioRepository.findByEmail(email))) {
+        if (usuarioRepository.findByEmail(email).isPresent()) {
             throw new UsuarioJaCadastradoException();
         }
         Vendedor vendedor = new Vendedor();

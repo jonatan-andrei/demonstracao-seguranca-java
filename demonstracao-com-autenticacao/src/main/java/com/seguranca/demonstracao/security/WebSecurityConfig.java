@@ -70,10 +70,10 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .authenticated()
 
                 .antMatchers(HttpMethod.POST, "/produto")
-                .hasRole("ADMIN")
+                .hasRole("ADMINISTRADOR")
 
                 .antMatchers(HttpMethod.DELETE, "/pedido/**")
-                .hasAnyRole("ADMIN", "VENDEDOR")
+                .hasAnyRole("ADMINISTRADOR", "VENDEDOR")
 
                 .anyRequest()
                 .denyAll();
