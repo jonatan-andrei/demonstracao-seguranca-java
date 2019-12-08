@@ -60,7 +60,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .and()
                 .authorizeRequests()
 
-                .antMatchers("/login", "/cadastro")
+                .antMatchers("/login", "/cadastro", "/cadastro/**")
                 .permitAll()
 
                 .antMatchers(HttpMethod.GET, "/produto")

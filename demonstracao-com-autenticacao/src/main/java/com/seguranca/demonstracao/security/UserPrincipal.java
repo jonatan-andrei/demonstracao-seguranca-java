@@ -1,5 +1,6 @@
 package com.seguranca.demonstracao.security;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.seguranca.demonstracao.domain.Usuario;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
@@ -19,6 +20,7 @@ public class UserPrincipal implements UserDetails {
 
     private String email;
 
+    @JsonIgnore
     private String senha;
 
     private Collection<? extends GrantedAuthority> authorities;
@@ -50,6 +52,7 @@ public class UserPrincipal implements UserDetails {
     }
 
     @Override
+    @JsonIgnore
     public String getPassword() {
         return senha;
     }

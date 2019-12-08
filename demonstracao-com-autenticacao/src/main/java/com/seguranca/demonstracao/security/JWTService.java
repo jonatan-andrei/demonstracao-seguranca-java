@@ -1,17 +1,16 @@
 package com.seguranca.demonstracao.security;
 
-import static java.lang.Long.parseLong;
-
-import java.util.Date;
-import java.util.Optional;
-
-import org.springframework.security.core.Authentication;
-
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jws;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
+import org.springframework.security.core.Authentication;
 import org.springframework.stereotype.Component;
+
+import java.util.Date;
+import java.util.Optional;
+
+import static java.lang.Long.parseLong;
 
 @Component
 public class JWTService {
